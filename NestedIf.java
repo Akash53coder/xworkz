@@ -15,8 +15,7 @@ public class NestedIf {
                     }else{
                         System.out.println("Candidate not having minimum balance");
                     }
-                }
-                else{
+                }else{
                     System.out.println("Candidate not having enough salary");
                 }
             }else{
