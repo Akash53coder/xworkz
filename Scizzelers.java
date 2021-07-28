@@ -21,7 +21,6 @@ class Scizzeler{
         scz1.yearOfPassing=2020;
         scz1.details();
 
-
         Scizzeler scz2=new Scizzeler();
           scz2.name="Adarsh";
         scz2.branch="ME";
@@ -29,14 +28,12 @@ class Scizzeler{
         scz2.yearOfPassing=2022;
         scz2.details();
 
-
-        Scizzeler scz3=new Scizzeler();
+       Scizzeler scz3=new Scizzeler();
          scz3.name="Girish";
         scz3.branch="ECE";
         scz3.usn="2ka16ec020";
         scz3.yearOfPassing=2019;
         scz3.details();
-
 
         Scizzeler scz4=new Scizzeler();
          scz4.name="Sahana";
@@ -44,7 +41,6 @@ class Scizzeler{
         scz4.usn="2ka16ee008";
         scz4.yearOfPassing=2022;
         scz4.details();
-
 
         Scizzeler scz5=new Scizzeler();
          scz5.name="Ramesh";
