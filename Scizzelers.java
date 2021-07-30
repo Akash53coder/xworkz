@@ -11,8 +11,6 @@ class Scizzeler{
     
         System.out.println("Name : "+name+", Branch : "+branch+", USN : "+usn+", Year of Passing : "+yearOfPassing);
     }
-
-
     public static void main(String args[]){
         Scizzeler scz1=new Scizzeler();
         scz1.name="Akash";
