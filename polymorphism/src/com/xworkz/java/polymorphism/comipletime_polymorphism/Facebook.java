@@ -2,19 +2,19 @@ package com.xworkz.java.polymorphism.comipletime_polymorphism;
 
 public class Facebook {
 	public void searchUser(int userId){
-		System.out.println("serach for user Id : "+userId+" found");
+		System.out.println("serach for user Id found : "+userId);
 	}
 
 	public void searchUser(long phoneNo){
-	    System.out.println("serach for Phone number : "+phoneNo+" found");
+	    System.out.println("serach for Phone number found : "+phoneNo);
 	}
 
 	public void searchUser(String fname,String lname){
-	    System.out.println("serach for Full Name : "+fname+" "+lname+" found");
+	    System.out.println("serach for Full Name found : "+fname+" "+lname);
 	}
 
 	public void searchUser(String name){
-	    System.out.println("serach for name : "+name+" found");
+	    System.out.println("serach for name found : "+name);
 	}
 
 	public void searchUser(String... query){
@@ -22,7 +22,7 @@ public class Facebook {
 	    for(String s:query){
 	        str=str+" "+s;
 	    }
-	    System.out.println("serach for user for the query string :"+str+"  found");
+	    System.out.println("serach for user for the query string found :"+str);
 	}
 
 }
