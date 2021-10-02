@@ -16,6 +16,7 @@ public class Atm {
 		}catch(invalidAmountException e) {
 			
 			System.out.println("Invalid amout entered");
+			//System.out.println("Invalid amount entered "+e);
 		}
 		
 		
