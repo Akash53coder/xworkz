@@ -6,8 +6,14 @@ public class FinalizeDemo {
 
 		Fan fan = new Fan();
 		System.out.println(fan);
-		fan=null;
-		System.gc();
+		try {
+			fan.finalize();
+		}
+		catch(Throwable e) {
+			System.out.println(e);
+		}
+		//fan=null;
+		//System.gc();
 	}
 
 }

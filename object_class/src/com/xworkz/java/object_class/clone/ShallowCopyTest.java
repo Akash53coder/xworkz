@@ -7,12 +7,13 @@ public class ShallowCopyTest {
 		Bus copyOfbus=null;
 		
 		try {
-			copyOfbus=(Bus)bus.cloneee();
+			 copyOfbus=(Bus)bus.cloneee();
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
 		
 		System.out.println(bus);
+		
 		bus.name="volvo";
 		System.out.println(bus);
 
