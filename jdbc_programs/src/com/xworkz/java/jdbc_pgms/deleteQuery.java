@@ -13,21 +13,21 @@ public class deleteQuery {
 		String password = "Akash@006";
 		String updateQuery = "delete from student_details where student_rollno=5";
 		Connection connection=null;
-		
+
 		try {
 			//Class.forName("com.mysql.cj.jdbc.Driver");//optional for type-4 drivers
 			//sending sql query from java program to db engine we need statement object
-			 connection = DriverManager.getConnection(url,userName,password);
+			connection = DriverManager.getConnection(url,userName,password);
 			Statement statement = connection.createStatement();
 			statement.executeUpdate(updateQuery);	
 			System.out.println("Data Deleted successfully");
-			
+
 		}catch( SQLException e) {
-			
+
 			System.out.println(e.getMessage());
 		}
 		finally {
-			 connection.close();
+			connection.close();
 		}
 	}
 }
