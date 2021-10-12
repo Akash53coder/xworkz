@@ -19,11 +19,11 @@ public class ConnectionProvider {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static Connection getConnection() {
 		return connection;
 	}
-	
+
 	public static void closeDbConnection() {
 		if(connection!=null) {
 			try {
