@@ -7,20 +7,20 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class StudentDAOImpl implements StudentDAO{
-	public static final String URL="jdbc:mysql://localhost:3306/students";
-	public static final String USERNAME = "root";
-	public static final String PASSWORD = "Akash@006";
-	
+
 	@Override
 	public void saveStudentDetails(){
 
+		String url="jdbc:mysql://localhost:3306/students";
+		String username = "root";
+		String password = "Akash@006";
 		String insertQuery = "INSERT INTO student_details values(6,'Alocious',10)";
 		Connection connection=null;
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			//sending sql query from java program to db engine we need statement object
-			connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+			connection = DriverManager.getConnection(url,username,password);
 			Statement statement = connection.createStatement();
 			statement.executeUpdate(insertQuery);	
 			System.out.println("Data inserted successfully");
@@ -41,13 +41,16 @@ public class StudentDAOImpl implements StudentDAO{
 	@Override
 	public void updateStudentDetails() {
 
+		String url="jdbc:mysql://localhost:3306/students";
+		String username = "root";
+		String password = "Akash@006";
 		String updateQuery = "update student_details set student_name='gabriel' where student_rollno=6";
 		Connection connection=null;
 
 		try {
 			//Class.forName("com.mysql.cj.jdbc.Driver");//optional for type-4 drivers
 			//sending sql query from java program to db engine we need statement object
-			connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+			connection = DriverManager.getConnection(url,username,password);
 			Statement statement = connection.createStatement();
 			statement.executeUpdate(updateQuery);	
 			System.out.println("Data Updated successfully");
@@ -69,13 +72,16 @@ public class StudentDAOImpl implements StudentDAO{
 	@Override
 	public void deleteStudentDetails() {
 
+		String url="jdbc:mysql://localhost:3306/students";
+		String username = "root";
+		String password = "Akash@006";
 		String updateQuery = "delete from student_details where student_rollno=3";
 		Connection connection=null;
 
 		try {
 			//Class.forName("com.mysql.cj.jdbc.Driver");//optional for type-4 drivers
 			//sending sql query from java program to db engine we need statement object
-			connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+			connection = DriverManager.getConnection(url,username,password);
 			Statement statement = connection.createStatement();
 			statement.executeUpdate(updateQuery);	
 			System.out.println("Data Deleted successfully");
@@ -97,12 +103,15 @@ public class StudentDAOImpl implements StudentDAO{
 	@Override
 	public void readAllRecords() {
 
+		String url="jdbc:mysql://localhost:3306/students";
+		String username = "root";
+		String password = "Akash@006";
 		String readSingleRecordQuery = "select * from student_details";
 		Connection connection=null;
 		try {
 			//Class.forName("com.mysql.cj.jdbc.Driver");//optional for type-4 drivers
 			//sending sql query from java program to db engine we need statement object
-			connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+			connection = DriverManager.getConnection(url,username,password);
 			Statement statement = connection.createStatement();
 			ResultSet resultSet=statement.executeQuery(readSingleRecordQuery);//excecute for read DQL
 
