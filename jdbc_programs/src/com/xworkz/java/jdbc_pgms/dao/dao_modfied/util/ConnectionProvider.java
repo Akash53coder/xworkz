@@ -16,12 +16,15 @@ public class ConnectionProvider {
 			connection=DriverManager.getConnection(url, username, password);
 			System.out.println("connection established");
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 	}
 
 	public static Connection getConnection() {
-		return connection;
+		if(connection!=null) {
+			return connection;
+		}
+		return null;
 	}
 
 	public static void closeDbConnection() {
@@ -29,7 +32,7 @@ public class ConnectionProvider {
 			try {
 				connection.close();
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println(e.getMessage());
 			}
 		}
 	}
