@@ -43,6 +43,9 @@ public class WardrobeOperator {
 	}
 
 	public boolean match(String thing) {
+		if(thing==null) {
+			return false;
+		}
 		for (int i = 0; i < this.container.length; i++) {
 			if (this.container[i].equals(thing)) {
 				System.out.println("thing found " + thing);
@@ -53,6 +56,9 @@ public class WardrobeOperator {
 	}
 
 	public boolean matchFirstChar(String ch) {
+		if(ch==null) {
+			return false;
+		}
 		for (int i = 0; i < this.container.length; i++) {
 			if (this.container[i].startsWith(ch)) {
 				System.out.println("thing found " + ch);
@@ -63,6 +69,9 @@ public class WardrobeOperator {
 	}
 
 	public boolean matchLastChar(String ch) {
+		if(ch==null) {
+			return false;
+		}
 		for (int i = 0; i < this.container.length; i++) {
 			if (this.container[i].endsWith(ch)) {
 				System.out.println("thing found " + ch);
