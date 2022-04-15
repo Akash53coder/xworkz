@@ -1,6 +1,7 @@
 package com.xworkz.java.jdbc_pgms;
 import java.sql.Connection;
 
+
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -16,6 +17,7 @@ public class ConnectDb {
 		String password="Akash@006";
 		Connection connection=null;
 		try {
+			
 			Class.forName("com.mysql.cj.jdbc.Driver");// Class.forName() will create
 			//and object of driver class here Driver is a class
 			//its a translator between java and sql

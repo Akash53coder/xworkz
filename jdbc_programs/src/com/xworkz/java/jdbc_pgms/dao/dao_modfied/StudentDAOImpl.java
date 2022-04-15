@@ -27,7 +27,7 @@ public class StudentDAOImpl implements StudentDAO {
 		} catch (SQLException e) {
 
 			System.out.println(e.getMessage());
-			
+
 		} catch (NullPointerException nullPointerException) {
 			System.out.println("connection unsuccessfull");
 		}
@@ -116,7 +116,6 @@ public class StudentDAOImpl implements StudentDAO {
 		String insertQuery = "INSERT INTO student_details values(?,?,?)"; // adding placeholders
 
 		try {
-			// sending sql query from java program to db engine we need statement object
 			PreparedStatement preparedstatement = ConnectionProvider.getConnection().prepareStatement(insertQuery);
 
 			preparedstatement.setInt(1, studentId);
@@ -137,19 +136,18 @@ public class StudentDAOImpl implements StudentDAO {
 			System.out.println("connection unsuccessfull");
 		}
 	}
-	
+
 	@Override
-	public void updateStudentDetails(String name,int rollno) {
+	public void updateStudentDetails(String name, int rollno) {
 
 		String updateQuery = "update student_details set student_name=? where student_rollno=?";
 
 		try {
 			// Class.forName("com.mysql.cj.jdbc.Driver");//optional for type-4 drivers
-			// sending sql query from java program to db engine we need statement object
 			PreparedStatement preparedStatement = ConnectionProvider.getConnection().prepareStatement(updateQuery);
 			preparedStatement.setString(1, name);
 			preparedStatement.setInt(2, rollno);
-			
+
 			preparedStatement.executeUpdate(updateQuery);
 			System.out.println("Data Updated successfully");
 			System.out.println("closing connection");
@@ -163,7 +161,7 @@ public class StudentDAOImpl implements StudentDAO {
 			System.out.println("connection unsuccessfull");
 		}
 	}
-	
+
 	@Override
 	public void deleteStudentDetails(int rollno) {
 
@@ -171,11 +169,10 @@ public class StudentDAOImpl implements StudentDAO {
 
 		try {
 			// Class.forName("com.mysql.cj.jdbc.Driver");//optional for type-4 drivers
-			// sending sql query from java program to db engine we need statement object
 			PreparedStatement preparedStatement = ConnectionProvider.getConnection().prepareStatement(deleteQuery);
 			preparedStatement.setInt(1, rollno);
 			preparedStatement.executeUpdate(deleteQuery);
-			
+
 			System.out.println("Data Deleted successfully");
 			System.out.println("closing connection");
 			ConnectionProvider.closeDbConnection();

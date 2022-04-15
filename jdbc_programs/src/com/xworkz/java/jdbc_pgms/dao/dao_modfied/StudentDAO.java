@@ -5,16 +5,16 @@ import java.sql.SQLException;
 public interface StudentDAO {
 
 	void saveStudentDetails();
-	
-	void saveStudentDetails(int studentId,String studentName,int studentClass);
-	
-	void updateStudentDetails();
-	
-	void updateStudentDetails(String name,int rollno);
 
-	
+	void saveStudentDetails(int studentId, String studentName, int studentClass);
+
+	void updateStudentDetails();
+
+	void updateStudentDetails(String name, int rollno);
+
 	void deleteStudentDetails();
-	
+
 	void deleteStudentDetails(int rollno);
+
 	void readAllRecords();
 }
