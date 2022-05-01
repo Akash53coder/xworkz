@@ -1,5 +1,7 @@
 package com.xworkz.java;
 
+//Tip : In all collection classes, in all wrapper classes, and in String class the the equals method
+//is overriden for content comparison the same is overriden for hashcode
 public class Objhashcode {
 	public static void main(String[] args) {
 		String s1 = "durga";
@@ -19,7 +21,7 @@ public class Objhashcode {
 		System.out.println(s3.hashCode());
 		System.out.println(s4.hashCode());
 		
-		//in StringBuffer equals and hashcode are not overriden
+		//in StringBuffer equals and hashcode are not overridden
 		StringBuffer sb = new StringBuffer("durga");
 		StringBuffer sb1 = new StringBuffer("durga");
 		
@@ -28,7 +30,7 @@ public class Objhashcode {
 		System.out.println(sb.hashCode());
 		System.out.println(sb1.hashCode());
 		
-		//in all wrapper class equals are overriden
+		//in all wrapper class equals are overridden
 		Integer i = 10;
 		Integer i1 = 10;
 		
@@ -36,6 +38,8 @@ public class Objhashcode {
 		System.out.println(i.hashCode());
 		System.out.println(i1.hashCode());
 		
+		//good programming practice is the variables which were included in equals method must
+		//be included in hashCode 
 		
 	}
 }
