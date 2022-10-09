@@ -15,6 +15,14 @@ class SuperExcp2{
 	public void m3() throws Exception {
 		
 	}
+	
+	public void m4() throws Throwable{
+		
+	}
+	
+	public void m5() throws Exception{
+		
+	}
 }
 public class ExceptionInOverrding2 extends SuperExcp2{
 
@@ -29,4 +37,13 @@ public class ExceptionInOverrding2 extends SuperExcp2{
 	public void m3() throws IOException{
 		
 	}
+	
+	public void m4() throws Exception{
+		
+	}
+	
+	//error
+//	public void m5() throws Throwable{
+//		
+//	}
 }

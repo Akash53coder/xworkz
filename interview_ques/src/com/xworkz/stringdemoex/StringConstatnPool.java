@@ -3,13 +3,13 @@ package com.xworkz.stringdemoex;
 public class StringConstatnPool {
 
 }
-//String pool is nothing but a storage area in Java heap where string literals stores.
-// By default, it is empty and privately maintained by the Java String class.
+//String pool is nothing but a storage area in Java heap where string literals are stored.
+//By default, it is empty and privately maintained by the Java String class.
 //The String Constant Pool is a special area used for the storage of string literals.
 // before Java 7, the string pool was part of the Permanent Generation memory area.
 //after 7 that they moved it to heap 
 //We know that string literals are created in the String pool, and string objects are 
-//created in the heap memory area.
+//with new keyword are created in the heap memory area.
 //internally uses hashmap.
 
 //IMP. String pool is an example of the Flyweight Design Pattern.

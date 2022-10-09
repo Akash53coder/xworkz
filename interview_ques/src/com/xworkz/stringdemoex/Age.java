@@ -12,7 +12,4 @@ public class Age {
 		this.year = year;
 	}
 	
-
-	
-	
 }

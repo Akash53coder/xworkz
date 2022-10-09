@@ -13,9 +13,9 @@ public class StringMethods {
 		//System.out.println(s.toUpperCase());
 		//System.out.println(s.toLowerCase());
 		
-		//System.out.println(s1.replace('\s','.'));
-		//use \\s for space in replaceAll() because it's regex(which takes a String)
-		//System.out.println(s1.replaceAll("\\s", ""));
+		System.out.println(s1.replace('\s','.'));
+		//*** use \\s for space in replaceAll() because it's regex(which takes a String)
+		System.out.println(s1.replaceAll("\\s", ""));
 		
 		//System.out.println(s.indexOf('a'));
 		//System.out.println(s.lastIndexOf('a'));
@@ -38,9 +38,11 @@ public class StringMethods {
 		
 		
 		//isEmpty considers "\\s" as not empty
+		//isEmpty returns true if, s.length == 0
 		String s4 = " ";
 		System.out.println(s4.isEmpty());
 		
+		//return true if string object has white space, or empty
 		String s5 = " ";
 		System.out.println(s5.isBlank());
 		
@@ -78,6 +80,7 @@ public class StringMethods {
 		//Static Methods of String
 		//all valueOf() will convert respective types to String type
 		boolean b1 = true;
+//		String s89 = String.valueOf(b1);
 		System.out.println(String.valueOf(b1));
 		
 //		System.out.println(String.valueOf(byte b));

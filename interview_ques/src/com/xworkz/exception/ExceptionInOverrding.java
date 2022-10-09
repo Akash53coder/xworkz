@@ -3,14 +3,14 @@ package com.xworkz.exception;
 import java.io.IOException;
 
 //	super class         |  subclass	   | acceptance
-//----------------------|--------------|-----------
-//   checked			|  checked     | ok    
-//   checked			|  unchecked   | ok
-//   checked			|  nothing     | ok
+//______________________|______________|____________
+//   checked			|  checked     | yes    
+//   checked			|  unchecked   | yes
+//   checked			|  nothing     | yes
+//   unchecked			|  unchecked   | yes
+//   no-exception       |  unchecked   | yes
 //   unchecked			|  checked	   | not
-//   unchecked			|  unchecked   | ok
 //   no-exception       |  checked     | not
-//   no-exception       |  unchecked   | ok
 
 class SuperExcp{
 	

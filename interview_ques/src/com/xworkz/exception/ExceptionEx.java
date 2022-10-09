@@ -6,14 +6,14 @@ public class ExceptionEx {
 
 		// for these examples see probabilities of execution
 //		try {
-//			int i=9/0;
+//			int i=9/1;
 //			System.out.println(i);
 //			return;
 //		} catch (Exception e) {
 //			System.out.println("exception caught");
 //			return;
 //		}
-//		//this is unreachable code
+		//this is unreachable code
 //		System.out.println("task completed");
 
 		String val = method1();
@@ -54,11 +54,13 @@ public class ExceptionEx {
 		try {
             int i = 9/0;
             System.out.println(i);
+//            return "";
         } catch (Exception e) {
             System.out.println("exception caught");
             return "from catch";
         } finally {
             System.out.println("finally block executing");
+//            return "";
         }
         System.out.println("end");
         return "from end";

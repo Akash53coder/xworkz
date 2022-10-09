@@ -5,13 +5,13 @@ package com.xworkz.stringdemoex;
 
 // 1. the class must be final so that subclasses don't override methods
 // 2. Make all your fields final, so that they’re initialized only once inside 
-//    the constructor and never modified afterward.
+//    the constructor and never modified afterwards.
 // 3. provide only getter methods. Don't provide setter methods 
 //    i.e don't give direct access
 // 4. When exposing methods which modify the state of the class, you must always 
 //   return a new instance of the class.
 // 5. If the class holds a mutable object:
-// Inside the constructor, make sure to use a clone copy of the passed argument and never set your 
+// Inside the constructor, make sure to use a cloned copy of the passed argument and never set your 
 // mutable field to the real instance passed through constructor, this is to prevent the clients who 
 // pass the object from modifying it afterwards.
 // Make sure to always return a clone copy of the field and never return the real object instance.
@@ -20,8 +20,7 @@ package com.xworkz.stringdemoex;
 // String , Wrapper classes, java.util.Locale, java.util.UUID etc
 
 //advantages 
-//thread safe, memory usage, do not need a copy constructor, Performance(SCP)
-
+//thread safe, *** do not need a copy constructor, Performance(SCP)
 
 //follow this https://dzone.com/articles/how-to-create-an-immutable-class-in-java
 public final class ImmutableStudent {
@@ -36,13 +35,13 @@ public final class ImmutableStudent {
 		super();
 		this.name = name;
 		this.id = id;
-		//deep copy in contructor itself
+		//deep copy in constructor itself
 		Age clone = new Age();
 		clone.setYear(age.getYear());
 		this.age = clone;
 	}
 
-	//setters are not allowed because as per the rule of immutability
+	//setters are not allowed because as per the rule.
 
 	public String getName() {
 		return name;
@@ -68,6 +67,7 @@ public final class ImmutableStudent {
 		
 		//1.prone to modify //solution creating a cloned object in constructor
 		age.setYear(1990);
+		System.out.println("student age year = " + student.getAge().getYear());
 		
 		//2.prone to modify //solution is returning a cloned object not student's age object
 		
