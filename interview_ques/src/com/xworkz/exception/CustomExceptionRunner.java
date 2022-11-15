@@ -21,7 +21,7 @@ public class CustomExceptionRunner {
 	public void checkUser(String ename) throws CustomException {
 
 		if (!ename.equals("akash")) {
-			throw new CustomException("wrong employee id");
+			throw new CustomException("invalid user");
 		}
 	}
 
@@ -35,7 +35,7 @@ public class CustomExceptionRunner {
 			}
 		
 			//If I add throws this code will not be executed
-		for(int i=0;i<10;i++) {
+		for(int i=0;i<2;i++) {
 			System.out.println(i);
 		}
 

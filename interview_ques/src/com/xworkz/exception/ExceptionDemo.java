@@ -2,6 +2,7 @@ package com.xworkz.exception;
 
 public class ExceptionDemo {
 
+	//exceptions are runtime errors, which will terminate the abnormally
 	//errors are unchecked
 	//toString(), printStackTrace() and getMessage() getCause() getLocalizedMessage() 
 	//are from Throwable,

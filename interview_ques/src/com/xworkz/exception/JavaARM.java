@@ -35,14 +35,10 @@ public class JavaARM {
 			String another = "../interview_ques/src/com/xworkz/exception/another.txt";
 			try(BufferedWriter bfw = new BufferedWriter(new FileWriter(another))){
 				for(int i : list) {
-					System.out.println("yes");
 					//write only allow Strings
 					bfw.write(i + ", ");
 				}
-			}catch(IOException e) {
-				System.out.println(e.getMessage());
 			}
-			
 		}catch(IOException e) {
 			System.out.println(e.getMessage());
 		}

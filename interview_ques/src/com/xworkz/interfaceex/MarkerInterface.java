@@ -25,7 +25,7 @@ public class MarkerInterface {
 	
 	//my interface (custom )
 	
-	//public interface Deleteable(){}
+	//public interface Deleteable{}
 	
 	//and my entity class must implement Deleteable in order to delete it from table
 	
@@ -38,13 +38,22 @@ public class MarkerInterface {
 		//if((en instanceof Deleteable)){
 	
 			//delete object
-		
 		//}
-	
-	
 	//}
 	
-	//refer : 
+// Marker Interfaces were the only way to declare metadata about a class. For example, 
+//the Serializable Marker Interface lets the author of a class say that their class will 
+//behave correctly when serialized and deserialized.
+//as per modern java Marker interfaces are completely replaced by annotations (Java 5). 
+//	They are called marker interfaces. And as the name implies, 
+// they mark that some object is available for certain sort of operations.
+//Again Annotations are a better choice @ThreadSafe, @Test looks a lot better than implementing 
+//the ThraedSafe marker interface.
+
+
+	
+//refer : 
 //https://www.baeldung.com/java-marker-interfaces#:~:text=A%20marker%20interface%20is%20an,also%20called%20a%20tagging%20interface.
+//https://javarevisited.blogspot.com/2012/01/what-is-marker-interfaces-in-java-and.html#ixzz2v6fIh1rw
 }
 

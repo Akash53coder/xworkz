@@ -40,9 +40,14 @@ public class ArraysEx {
 		s[2] = new Student(4,"da");
 		
 		//here in order to sort I need to have Student as comparable
-		Arrays.sort(s);
+//		Arrays.sort(s);
+//		
+//		System.out.println(Arrays.toString(s));
+		
+		Arrays.sort(s, (s1, s2) -> {
+			return -s1.compareTo(s2);
+		});
 		
 		System.out.println(Arrays.toString(s));
-		
 	}
 }

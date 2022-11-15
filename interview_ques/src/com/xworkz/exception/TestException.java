@@ -1,6 +1,8 @@
 package com.xworkz.exception;
 
-//This is a trick question, there is no problem with the code and it will compile successfully. 
+import java.io.IOException;
+
+//This is a tricky question, there is no problem with the code and it will compile successfully. 
 //We can always catch an Exception or any unchecked exception even if it’s not in the throws clause of the method.
 
 //Similarly, if a method (foo) declares an unchecked exception in the throws clause, it is not 
@@ -8,14 +10,19 @@ package com.xworkz.exception;
 public class TestException {
 
 	public static void main(String[] args) {
-		try{
-		bar();
-		}catch(NullPointerException e){
-			e.printStackTrace();
-		}catch(Exception e){
+		try {
+			bar();
+		}
+		catch(NumberFormatException e) {
+			//any unchecked exception is fine
+		}
+		//error
+//		catch (IOException e) {
+//			e.printStackTrace();
+//		} 
+		catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		foo();
 	}
 
